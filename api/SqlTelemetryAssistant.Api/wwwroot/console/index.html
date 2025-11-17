@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <title>SQL Telemetry – DBA Console</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="./styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header class="app-header">
+    <div>
+      <h1>SQL Telemetry – DBA Console</h1>
+      <p class="subtitle">Pulse + rekomendacja LLM + baza wiedzy SQLManiaka</p>
+    </div>
+    <button id="refreshBtn" class="btn-primary">Odśwież</button>
+  </header>
+
+  <main class="layout">
+    <section class="card card-left">
+      <h2>Wait stats – ostatnie minuty</h2>
+      <canvas id="waitChart" height="160"></canvas>
+      <table class="wait-table">
+        <thead>
+          <tr>
+            <th>Wait type</th>
+            <th>Łącznie [ms]</th>
+            <th>Udział [%]</th>
+          </tr>
+        </thead>
+        <tbody id="waitTableBody">
+          <tr><td colspan="3" class="muted">Brak danych – kliknij „Odśwież”.</td></tr>
+        </tbody>
+      </table>
+      <p class="timestamp" id="pulseTimestamp"></p>
+    </section>
+
+    <section class="card card-right">
+      <div class="tabs">
+        <button class="tab-button active" data-tab="recommendation">Rekomendacja LLM</button>
+        <button class="tab-button" data-tab="knowledge">Na podstawie wiedzy</button>
+      </div>
+      <div id="tab-recommendation" class="tab-panel active">
+        <pre id="recommendation" class="recommendation-block">Kliknij „Odśwież”, aby pobrać rekomendację.</pre>
+      </div>
+      <div id="tab-knowledge" class="tab-panel">
+        <div id="knowledge" class="knowledge-block">
+          <p class="muted">Tu pojawią się fragmenty dokumentacji (Markdown) użyte do rekomendacji.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <span>SQLManiak – Telemetry &amp; AI Lab</span>
+    <span id="statusLabel" class="status-label">Status: oczekiwanie na dane…</span>
+  </footer>
+
+  <script src="./app.js"></script>
+</body>
+</html>

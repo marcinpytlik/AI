@@ -1,0 +1,37 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\blad\\Documents\\GitHub\\AI\\api\\SqlTelemetryAssistant.Api\\wwwroot\\console\\app.js",
+      "PackagePath": "staticwebassets\\console\\app.js"
+    },
+    {
+      "Id": "C:\\Users\\blad\\Documents\\GitHub\\AI\\api\\SqlTelemetryAssistant.Api\\wwwroot\\console\\index.html",
+      "PackagePath": "staticwebassets\\console\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\blad\\Documents\\GitHub\\AI\\api\\SqlTelemetryAssistant.Api\\wwwroot\\console\\styles.css",
+      "PackagePath": "staticwebassets\\console\\styles.css"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.SqlTelemetryAssistant.Api.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.SqlTelemetryAssistant.Api.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.build.SqlTelemetryAssistant.Api.props",
+      "PackagePath": "build\\SqlTelemetryAssistant.Api.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildMultiTargeting.SqlTelemetryAssistant.Api.props",
+      "PackagePath": "buildMultiTargeting\\SqlTelemetryAssistant.Api.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildTransitive.SqlTelemetryAssistant.Api.props",
+      "PackagePath": "buildTransitive\\SqlTelemetryAssistant.Api.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -1,0 +1,40 @@
+﻿<Project>
+  <ItemGroup>
+    <StaticWebAssetEndpoint Include="_content/SqlTelemetryAssistant.Api/console/app.8hr8hbcbj9.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\console\app.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"8hr8hbcbj9"},{"Name":"integrity","Value":"sha256-5IVoIEGmlgr7OhtIWoOFnEksL3S4xo84iFKvBjPlI7E="},{"Name":"label","Value":"_content/SqlTelemetryAssistant.Api/console/app.js"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"4750"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u00225IVoIEGmlgr7OhtIWoOFnEksL3S4xo84iFKvBjPlI7E=\u0022"},{"Name":"Last-Modified","Value":"Mon, 17 Nov 2025 18:20:42 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/SqlTelemetryAssistant.Api/console/app.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\console\app.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-5IVoIEGmlgr7OhtIWoOFnEksL3S4xo84iFKvBjPlI7E="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"4750"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u00225IVoIEGmlgr7OhtIWoOFnEksL3S4xo84iFKvBjPlI7E=\u0022"},{"Name":"Last-Modified","Value":"Mon, 17 Nov 2025 18:20:42 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/SqlTelemetryAssistant.Api/console/index.html">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\console\index.html'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-2WTpr1jUsYNemevFQX0\u002BTFq5OPCRxujYZjFluQhcSC8="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"2102"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u00222WTpr1jUsYNemevFQX0\u002BTFq5OPCRxujYZjFluQhcSC8=\u0022"},{"Name":"Last-Modified","Value":"Mon, 17 Nov 2025 18:20:42 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/SqlTelemetryAssistant.Api/console/index.tbj469uz25.html">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\console\index.html'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"tbj469uz25"},{"Name":"integrity","Value":"sha256-2WTpr1jUsYNemevFQX0\u002BTFq5OPCRxujYZjFluQhcSC8="},{"Name":"label","Value":"_content/SqlTelemetryAssistant.Api/console/index.html"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2102"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u00222WTpr1jUsYNemevFQX0\u002BTFq5OPCRxujYZjFluQhcSC8=\u0022"},{"Name":"Last-Modified","Value":"Mon, 17 Nov 2025 18:20:42 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/SqlTelemetryAssistant.Api/console/styles.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\console\styles.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-5ciT8JDHG7xlo7iHt8qH\u002B9pjBvQ55XobNPOeqCkSpiQ="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"5045"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u00225ciT8JDHG7xlo7iHt8qH\u002B9pjBvQ55XobNPOeqCkSpiQ=\u0022"},{"Name":"Last-Modified","Value":"Mon, 17 Nov 2025 18:20:42 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/SqlTelemetryAssistant.Api/console/styles.taytipqadp.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\console\styles.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"taytipqadp"},{"Name":"integrity","Value":"sha256-5ciT8JDHG7xlo7iHt8qH\u002B9pjBvQ55XobNPOeqCkSpiQ="},{"Name":"label","Value":"_content/SqlTelemetryAssistant.Api/console/styles.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"5045"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u00225ciT8JDHG7xlo7iHt8qH\u002B9pjBvQ55XobNPOeqCkSpiQ=\u0022"},{"Name":"Last-Modified","Value":"Mon, 17 Nov 2025 18:20:42 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+  </ItemGroup>
+</Project>

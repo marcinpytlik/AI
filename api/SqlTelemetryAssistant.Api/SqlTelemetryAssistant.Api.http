@@ -1,0 +1,9 @@
+
+### Test API root (API-only)
+GET http://localhost:5051/api
+
+### Pulse + zwykła rekomendacja
+GET http://localhost:5051/telemetry/pulse
+
+### Pulse + rekomendacja z bazą wiedzy (Markdown)
+GET http://localhost:5051/telemetry/pulse-kb

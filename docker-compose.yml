@@ -1,0 +1,73 @@
+
+version: "3.9"
+
+services:
+  influxdb:
+    image: influxdb:2.7
+    container_name: influxdb
+    ports:
+      - "8086:8086"
+    environment:
+      - DOCKER_INFLUXDB_INIT_MODE=setup
+      - DOCKER_INFLUXDB_INIT_USERNAME=admin
+      - DOCKER_INFLUXDB_INIT_PASSWORD=YourStrong!Passw0rd
+      - DOCKER_INFLUXDB_INIT_ORG=Demo
+      - DOCKER_INFLUXDB_INIT_BUCKET=sql_telemetry
+      - DOCKER_INFLUXDB_INIT_ADMIN_TOKEN=dev-token
+    volumes:
+      - influx-data:/var/lib/influxdb2
+
+  telegraf:
+    image: telegraf:1.30
+    container_name: telegraf
+    depends_on:
+      - influxdb
+    volumes:
+      - ./telegraf/telegraf.conf:/etc/telegraf/telegraf.conf:ro
+
+  ollama:
+    image: ollama/ollama:latest
+    container_name: ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama-data:/root/.ollama
+    restart: unless-stopped
+
+  api:
+    build:
+      context: ./api/SqlTelemetryAssistant.Api
+    container_name: sql-telemetry-api
+    depends_on:
+      - influxdb
+      - ollama
+    environment:
+      - ASPNETCORE_URLS=http://0.0.0.0:8080
+      - Influx__Url=http://influxdb:8086
+      - Influx__Org=Demo
+      - Influx__Bucket=sql_telemetry
+      - Influx__Token=dev-token
+      - Ai__Provider=Local
+      - LocalLlm__BaseUrl=http://ollama:11434/v1
+      - LocalLlm__Model=llama3.1
+    ports:
+      - "5051:8080"
+
+  grafana:
+    image: grafana/grafana:11.0.0
+    container_name: grafana
+    depends_on:
+      - influxdb
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=SQLmaniak!2025
+      - GF_USERS_ALLOW_SIGN_UP=false
+    volumes:
+      - grafana-data:/var/lib/grafana
+
+volumes:
+  influx-data:
+  ollama-data:
+  grafana-data:

@@ -1,0 +1,1042 @@
+{
+  "Version": 1,
+  "Hash": "59oIDI4d/4GpLzp5A782hPTOaSvzS12VSKMW3Rblqok=",
+  "Source": "SqlTelemetryAssistant.Api",
+  "BasePath": "_content/SqlTelemetryAssistant.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "SqlTelemetryAssistant.Api\\wwwroot",
+      "Source": "SqlTelemetryAssistant.Api",
+      "ContentRoot": "C:\\Users\\blad\\Documents\\GitHub\\AI\\api\\SqlTelemetryAssistant.Api\\wwwroot\\",
+      "BasePath": "_content/SqlTelemetryAssistant.Api",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\blad\\Documents\\GitHub\\AI\\api\\SqlTelemetryAssistant.Api\\obj\\Debug\\net9.0\\compressed\\2c9rb396oc-taytipqadp.gz",
+      "SourceId": "SqlTelemetryAssistant.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\blad\\Documents\\GitHub\\AI\\api\\SqlTelemetryAssistant.Api\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/SqlTelemetryAssistant.Api",
+      "RelativePath": "console/styles#[.{fingerprint=taytipqadp}]?.css.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\blad\\Documents\\GitHub\\AI\\api\\SqlTelemetryAssistant.Api\\wwwroot\\console\\styles.css",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "2579eg1u97",
+      "Integrity": "mtWoa6N8YACinFO1Ioi5I+cz/UVWNZxVJSSvIZdXRjs=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\blad\\Documents\\GitHub\\AI\\api\\SqlTelemetryAssistant.Api\\wwwroot\\console\\styles.css"
+    },
+    {
+      "Identity": "C:\\Users\\blad\\Documents\\GitHub\\AI\\api\\SqlTelemetryAssistant.Api\\obj\\Debug\\net9.0\\compressed\\l2qagwdomc-tbj469uz25.gz",
+      "SourceId": "SqlTelemetryAssistant.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\blad\\Documents\\GitHub\\AI\\api\\SqlTelemetryAssistant.Api\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/SqlTelemetryAssistant.Api",
+      "RelativePath": "console/index#[.{fingerprint=tbj469uz25}]?.html.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\blad\\Documents\\GitHub\\AI\\api\\SqlTelemetryAssistant.Api\\wwwroot\\console\\index.html",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "mi3tr877sz",
+      "Integrity": "DgIjm1VlEAViXcY533bmoNtMrOWzf1k+S063cilfuA4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\blad\\Documents\\GitHub\\AI\\api\\SqlTelemetryAssistant.Api\\wwwroot\\console\\index.html"
+    },
+    {
+      "Identity": "C:\\Users\\blad\\Documents\\GitHub\\AI\\api\\SqlTelemetryAssistant.Api\\obj\\Debug\\net9.0\\compressed\\r6q1frgsot-8hr8hbcbj9.gz",
+      "SourceId": "SqlTelemetryAssistant.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\blad\\Documents\\GitHub\\AI\\api\\SqlTelemetryAssistant.Api\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/SqlTelemetryAssistant.Api",
+      "RelativePath": "console/app#[.{fingerprint=8hr8hbcbj9}]?.js.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\blad\\Documents\\GitHub\\AI\\api\\SqlTelemetryAssistant.Api\\wwwroot\\console\\app.js",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "9i8qjji7m6",
+      "Integrity": "kay0diKzK4lmmW5sHf5rdJXhUEfi8xwYaJeMCc5f2n0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\blad\\Documents\\GitHub\\AI\\api\\SqlTelemetryAssistant.Api\\wwwroot\\console\\app.js"
+    },
+    {
+      "Identity": "C:\\Users\\blad\\Documents\\GitHub\\AI\\api\\SqlTelemetryAssistant.Api\\wwwroot\\console\\app.js",
+      "SourceId": "SqlTelemetryAssistant.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\blad\\Documents\\GitHub\\AI\\api\\SqlTelemetryAssistant.Api\\wwwroot\\",
+      "BasePath": "_content/SqlTelemetryAssistant.Api",
+      "RelativePath": "console/app#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "8hr8hbcbj9",
+      "Integrity": "5IVoIEGmlgr7OhtIWoOFnEksL3S4xo84iFKvBjPlI7E=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\console\\app.js"
+    },
+    {
+      "Identity": "C:\\Users\\blad\\Documents\\GitHub\\AI\\api\\SqlTelemetryAssistant.Api\\wwwroot\\console\\index.html",
+      "SourceId": "SqlTelemetryAssistant.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\blad\\Documents\\GitHub\\AI\\api\\SqlTelemetryAssistant.Api\\wwwroot\\",
+      "BasePath": "_content/SqlTelemetryAssistant.Api",
+      "RelativePath": "console/index#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "tbj469uz25",
+      "Integrity": "2WTpr1jUsYNemevFQX0+TFq5OPCRxujYZjFluQhcSC8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\console\\index.html"
+    },
+    {
+      "Identity": "C:\\Users\\blad\\Documents\\GitHub\\AI\\api\\SqlTelemetryAssistant.Api\\wwwroot\\console\\styles.css",
+      "SourceId": "SqlTelemetryAssistant.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\blad\\Documents\\GitHub\\AI\\api\\SqlTelemetryAssistant.Api\\wwwroot\\",
+      "BasePath": "_content/SqlTelemetryAssistant.Api",
+      "RelativePath": "console/styles#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "taytipqadp",
+      "Integrity": "5ciT8JDHG7xlo7iHt8qH+9pjBvQ55XobNPOeqCkSpiQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\console\\styles.css"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "console/app.8hr8hbcbj9.js",
+      "AssetFile": "C:\\Users\\blad\\Documents\\GitHub\\AI\\api\\SqlTelemetryAssistant.Api\\obj\\Debug\\net9.0\\compressed\\r6q1frgsot-8hr8hbcbj9.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000558347292"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1790"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"kay0diKzK4lmmW5sHf5rdJXhUEfi8xwYaJeMCc5f2n0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 17 Nov 2025 18:20:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"5IVoIEGmlgr7OhtIWoOFnEksL3S4xo84iFKvBjPlI7E=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "8hr8hbcbj9"
+        },
+        {
+          "Name": "label",
+          "Value": "console/app.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-5IVoIEGmlgr7OhtIWoOFnEksL3S4xo84iFKvBjPlI7E="
+        }
+      ]
+    },
+    {
+      "Route": "console/app.8hr8hbcbj9.js",
+      "AssetFile": "C:\\Users\\blad\\Documents\\GitHub\\AI\\api\\SqlTelemetryAssistant.Api\\wwwroot\\console\\app.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4750"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"5IVoIEGmlgr7OhtIWoOFnEksL3S4xo84iFKvBjPlI7E=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 17 Nov 2025 18:20:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "8hr8hbcbj9"
+        },
+        {
+          "Name": "label",
+          "Value": "console/app.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-5IVoIEGmlgr7OhtIWoOFnEksL3S4xo84iFKvBjPlI7E="
+        }
+      ]
+    },
+    {
+      "Route": "console/app.8hr8hbcbj9.js.gz",
+      "AssetFile": "C:\\Users\\blad\\Documents\\GitHub\\AI\\api\\SqlTelemetryAssistant.Api\\obj\\Debug\\net9.0\\compressed\\r6q1frgsot-8hr8hbcbj9.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1790"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"kay0diKzK4lmmW5sHf5rdJXhUEfi8xwYaJeMCc5f2n0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 17 Nov 2025 18:20:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "8hr8hbcbj9"
+        },
+        {
+          "Name": "label",
+          "Value": "console/app.js.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-kay0diKzK4lmmW5sHf5rdJXhUEfi8xwYaJeMCc5f2n0="
+        }
+      ]
+    },
+    {
+      "Route": "console/app.js",
+      "AssetFile": "C:\\Users\\blad\\Documents\\GitHub\\AI\\api\\SqlTelemetryAssistant.Api\\obj\\Debug\\net9.0\\compressed\\r6q1frgsot-8hr8hbcbj9.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000558347292"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1790"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"kay0diKzK4lmmW5sHf5rdJXhUEfi8xwYaJeMCc5f2n0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 17 Nov 2025 18:20:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"5IVoIEGmlgr7OhtIWoOFnEksL3S4xo84iFKvBjPlI7E=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-5IVoIEGmlgr7OhtIWoOFnEksL3S4xo84iFKvBjPlI7E="
+        }
+      ]
+    },
+    {
+      "Route": "console/app.js",
+      "AssetFile": "C:\\Users\\blad\\Documents\\GitHub\\AI\\api\\SqlTelemetryAssistant.Api\\wwwroot\\console\\app.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4750"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"5IVoIEGmlgr7OhtIWoOFnEksL3S4xo84iFKvBjPlI7E=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 17 Nov 2025 18:20:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-5IVoIEGmlgr7OhtIWoOFnEksL3S4xo84iFKvBjPlI7E="
+        }
+      ]
+    },
+    {
+      "Route": "console/app.js.gz",
+      "AssetFile": "C:\\Users\\blad\\Documents\\GitHub\\AI\\api\\SqlTelemetryAssistant.Api\\obj\\Debug\\net9.0\\compressed\\r6q1frgsot-8hr8hbcbj9.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1790"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"kay0diKzK4lmmW5sHf5rdJXhUEfi8xwYaJeMCc5f2n0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 17 Nov 2025 18:20:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-kay0diKzK4lmmW5sHf5rdJXhUEfi8xwYaJeMCc5f2n0="
+        }
+      ]
+    },
+    {
+      "Route": "console/index.html",
+      "AssetFile": "C:\\Users\\blad\\Documents\\GitHub\\AI\\api\\SqlTelemetryAssistant.Api\\obj\\Debug\\net9.0\\compressed\\l2qagwdomc-tbj469uz25.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001055966209"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "946"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"DgIjm1VlEAViXcY533bmoNtMrOWzf1k+S063cilfuA4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 17 Nov 2025 18:20:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"2WTpr1jUsYNemevFQX0+TFq5OPCRxujYZjFluQhcSC8=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-2WTpr1jUsYNemevFQX0+TFq5OPCRxujYZjFluQhcSC8="
+        }
+      ]
+    },
+    {
+      "Route": "console/index.html",
+      "AssetFile": "C:\\Users\\blad\\Documents\\GitHub\\AI\\api\\SqlTelemetryAssistant.Api\\wwwroot\\console\\index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2102"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2WTpr1jUsYNemevFQX0+TFq5OPCRxujYZjFluQhcSC8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 17 Nov 2025 18:20:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-2WTpr1jUsYNemevFQX0+TFq5OPCRxujYZjFluQhcSC8="
+        }
+      ]
+    },
+    {
+      "Route": "console/index.html.gz",
+      "AssetFile": "C:\\Users\\blad\\Documents\\GitHub\\AI\\api\\SqlTelemetryAssistant.Api\\obj\\Debug\\net9.0\\compressed\\l2qagwdomc-tbj469uz25.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "946"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"DgIjm1VlEAViXcY533bmoNtMrOWzf1k+S063cilfuA4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 17 Nov 2025 18:20:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-DgIjm1VlEAViXcY533bmoNtMrOWzf1k+S063cilfuA4="
+        }
+      ]
+    },
+    {
+      "Route": "console/index.tbj469uz25.html",
+      "AssetFile": "C:\\Users\\blad\\Documents\\GitHub\\AI\\api\\SqlTelemetryAssistant.Api\\obj\\Debug\\net9.0\\compressed\\l2qagwdomc-tbj469uz25.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001055966209"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "946"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"DgIjm1VlEAViXcY533bmoNtMrOWzf1k+S063cilfuA4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 17 Nov 2025 18:20:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"2WTpr1jUsYNemevFQX0+TFq5OPCRxujYZjFluQhcSC8=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "tbj469uz25"
+        },
+        {
+          "Name": "label",
+          "Value": "console/index.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-2WTpr1jUsYNemevFQX0+TFq5OPCRxujYZjFluQhcSC8="
+        }
+      ]
+    },
+    {
+      "Route": "console/index.tbj469uz25.html",
+      "AssetFile": "C:\\Users\\blad\\Documents\\GitHub\\AI\\api\\SqlTelemetryAssistant.Api\\wwwroot\\console\\index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2102"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2WTpr1jUsYNemevFQX0+TFq5OPCRxujYZjFluQhcSC8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 17 Nov 2025 18:20:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "tbj469uz25"
+        },
+        {
+          "Name": "label",
+          "Value": "console/index.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-2WTpr1jUsYNemevFQX0+TFq5OPCRxujYZjFluQhcSC8="
+        }
+      ]
+    },
+    {
+      "Route": "console/index.tbj469uz25.html.gz",
+      "AssetFile": "C:\\Users\\blad\\Documents\\GitHub\\AI\\api\\SqlTelemetryAssistant.Api\\obj\\Debug\\net9.0\\compressed\\l2qagwdomc-tbj469uz25.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "946"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"DgIjm1VlEAViXcY533bmoNtMrOWzf1k+S063cilfuA4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 17 Nov 2025 18:20:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "tbj469uz25"
+        },
+        {
+          "Name": "label",
+          "Value": "console/index.html.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-DgIjm1VlEAViXcY533bmoNtMrOWzf1k+S063cilfuA4="
+        }
+      ]
+    },
+    {
+      "Route": "console/styles.css",
+      "AssetFile": "C:\\Users\\blad\\Documents\\GitHub\\AI\\api\\SqlTelemetryAssistant.Api\\obj\\Debug\\net9.0\\compressed\\2c9rb396oc-taytipqadp.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000659195781"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1516"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mtWoa6N8YACinFO1Ioi5I+cz/UVWNZxVJSSvIZdXRjs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 17 Nov 2025 18:20:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"5ciT8JDHG7xlo7iHt8qH+9pjBvQ55XobNPOeqCkSpiQ=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-5ciT8JDHG7xlo7iHt8qH+9pjBvQ55XobNPOeqCkSpiQ="
+        }
+      ]
+    },
+    {
+      "Route": "console/styles.css",
+      "AssetFile": "C:\\Users\\blad\\Documents\\GitHub\\AI\\api\\SqlTelemetryAssistant.Api\\wwwroot\\console\\styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5045"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"5ciT8JDHG7xlo7iHt8qH+9pjBvQ55XobNPOeqCkSpiQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 17 Nov 2025 18:20:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-5ciT8JDHG7xlo7iHt8qH+9pjBvQ55XobNPOeqCkSpiQ="
+        }
+      ]
+    },
+    {
+      "Route": "console/styles.css.gz",
+      "AssetFile": "C:\\Users\\blad\\Documents\\GitHub\\AI\\api\\SqlTelemetryAssistant.Api\\obj\\Debug\\net9.0\\compressed\\2c9rb396oc-taytipqadp.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1516"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mtWoa6N8YACinFO1Ioi5I+cz/UVWNZxVJSSvIZdXRjs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 17 Nov 2025 18:20:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-mtWoa6N8YACinFO1Ioi5I+cz/UVWNZxVJSSvIZdXRjs="
+        }
+      ]
+    },
+    {
+      "Route": "console/styles.taytipqadp.css",
+      "AssetFile": "C:\\Users\\blad\\Documents\\GitHub\\AI\\api\\SqlTelemetryAssistant.Api\\obj\\Debug\\net9.0\\compressed\\2c9rb396oc-taytipqadp.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000659195781"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1516"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mtWoa6N8YACinFO1Ioi5I+cz/UVWNZxVJSSvIZdXRjs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 17 Nov 2025 18:20:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"5ciT8JDHG7xlo7iHt8qH+9pjBvQ55XobNPOeqCkSpiQ=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "taytipqadp"
+        },
+        {
+          "Name": "label",
+          "Value": "console/styles.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-5ciT8JDHG7xlo7iHt8qH+9pjBvQ55XobNPOeqCkSpiQ="
+        }
+      ]
+    },
+    {
+      "Route": "console/styles.taytipqadp.css",
+      "AssetFile": "C:\\Users\\blad\\Documents\\GitHub\\AI\\api\\SqlTelemetryAssistant.Api\\wwwroot\\console\\styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5045"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"5ciT8JDHG7xlo7iHt8qH+9pjBvQ55XobNPOeqCkSpiQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 17 Nov 2025 18:20:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "taytipqadp"
+        },
+        {
+          "Name": "label",
+          "Value": "console/styles.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-5ciT8JDHG7xlo7iHt8qH+9pjBvQ55XobNPOeqCkSpiQ="
+        }
+      ]
+    },
+    {
+      "Route": "console/styles.taytipqadp.css.gz",
+      "AssetFile": "C:\\Users\\blad\\Documents\\GitHub\\AI\\api\\SqlTelemetryAssistant.Api\\obj\\Debug\\net9.0\\compressed\\2c9rb396oc-taytipqadp.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1516"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mtWoa6N8YACinFO1Ioi5I+cz/UVWNZxVJSSvIZdXRjs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 17 Nov 2025 18:20:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "taytipqadp"
+        },
+        {
+          "Name": "label",
+          "Value": "console/styles.css.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-mtWoa6N8YACinFO1Ioi5I+cz/UVWNZxVJSSvIZdXRjs="
+        }
+      ]
+    }
+  ]
+}
