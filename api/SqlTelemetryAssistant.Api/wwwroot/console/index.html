@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -12,41 +11,113 @@
   <header class="app-header">
     <div>
       <h1>SQL Telemetry – DBA Console</h1>
-      <p class="subtitle">Pulse + rekomendacja LLM + baza wiedzy SQLManiaka</p>
+      <p class="subtitle">
+        Pulse z InfluxDB + SQL Server snapshot + AISQL dla DBA
+      </p>
     </div>
-    <button id="refreshBtn" class="btn-primary">Odśwież</button>
+    <div class="header-actions">
+      <button id="refreshPulseBtn" class="primary-btn">Odśwież Pulse</button>
+      <button id="refreshSqlAiBtn" class="ghost-btn">Odśwież SQL + AI</button>
+    </div>
   </header>
 
   <main class="layout">
+    <!-- LEWA KOLUMNA – Pulse z InfluxDB -->
     <section class="card card-left">
-      <h2>Wait stats – ostatnie minuty</h2>
-      <canvas id="waitChart" height="160"></canvas>
+      <h2>Pulse z InfluxDB (wait stats)</h2>
+      <p class="card-description">
+        Skrócony pulsometr instancji z InfluxDB – top waity oraz ich udział procentowy.
+      </p>
+
+      <div class="chart-container">
+        <canvas id="waitChart"></canvas>
+      </div>
+
       <table class="wait-table">
         <thead>
-          <tr>
-            <th>Wait type</th>
-            <th>Łącznie [ms]</th>
-            <th>Udział [%]</th>
-          </tr>
+        <tr>
+          <th>Wait type</th>
+          <th>Całkowity czas (ms)</th>
+          <th>Udział (%)</th>
+        </tr>
         </thead>
         <tbody id="waitTableBody">
-          <tr><td colspan="3" class="muted">Brak danych – kliknij „Odśwież”.</td></tr>
+        <tr><td colspan="3" class="muted">Brak danych – kliknij „Odśwież Pulse”.</td></tr>
         </tbody>
       </table>
+
       <p class="timestamp" id="pulseTimestamp"></p>
     </section>
 
+    <!-- PRAWA KOLUMNA – LLM + AISQL -->
     <section class="card card-right">
       <div class="tabs">
-        <button class="tab-button active" data-tab="recommendation">Rekomendacja LLM</button>
-        <button class="tab-button" data-tab="knowledge">Na podstawie wiedzy</button>
+        <button class="tab-button active" data-tab="pulse-llm">Pulse + rekomendacja</button>
+        <button class="tab-button" data-tab="sql-ai">SQL + AI snapshot</button>
+        <button class="tab-button" data-tab="aisql">AISQL – pytania</button>
       </div>
-      <div id="tab-recommendation" class="tab-panel active">
-        <pre id="recommendation" class="recommendation-block">Kliknij „Odśwież”, aby pobrać rekomendację.</pre>
-      </div>
-      <div id="tab-knowledge" class="tab-panel">
+
+      <!-- TAB 1: Pulse + rekomendacja + baza wiedzy -->
+      <div id="tab-pulse-llm" class="tab-panel active">
+        <h2>Rekomendacja LLM na podstawie Pulse</h2>
+        <pre id="recommendation" class="recommendation-block">
+Kliknij „Odśwież Pulse”, aby pobrać rekomendację.</pre>
+
+        <h3>Użyte fragmenty bazy wiedzy</h3>
         <div id="knowledge" class="knowledge-block">
-          <p class="muted">Tu pojawią się fragmenty dokumentacji (Markdown) użyte do rekomendacji.</p>
+          <p class="muted">
+            Tu pojawią się fragmenty dokumentacji użyte przy generowaniu rekomendacji.
+          </p>
+        </div>
+      </div>
+
+      <!-- TAB 2: SQL + AI snapshot -->
+      <div id="tab-sql-ai" class="tab-panel">
+        <h2>SQL Server + OpenAI snapshot</h2>
+        <p class="card-description">
+          Szybki zrzut z instancji SQL Server oraz rekomendacja GPT na podstawie snapshotu.
+        </p>
+
+        <pre id="sqlAiSnapshot" class="snapshot-block">
+Kliknij „Odśwież SQL + AI”, aby pobrać snapshot.</pre>
+
+        <h3>Rekomendacja</h3>
+        <pre id="sqlAiRecommendation" class="recommendation-block">
+Brak danych – najpierw pobierz snapshot.</pre>
+      </div>
+
+      <!-- TAB 3: AISQL -->
+      <div id="tab-aisql" class="tab-panel">
+        <h2>AISQL – naturalne pytania o DMVs</h2>
+        <p class="card-description">
+          Zadaj pytanie diagnostyczne (np. „Pokaż top 10 zapytań z największym czasem CPU w Query Store”).
+        </p>
+
+        <label for="aisqlQuestion" class="label">Pytanie</label>
+        <textarea id="aisqlQuestion" rows="3"
+                  placeholder="Np. Pokaż top 10 zapytań z największym czasem CPU w Query Store."></textarea>
+
+        <div class="aisql-actions">
+          <button id="runAiSqlBtn" class="primary-btn">Uruchom AISQL</button>
+        </div>
+
+        <h3>Wygenerowany T-SQL</h3>
+        <pre id="aisqlSql" class="code-block">– tutaj pojawi się zapytanie wygenerowane przez model</pre>
+
+        <h3>Wyjaśnienie</h3>
+        <pre id="aisqlExplanation" class="explanation-block">
+– tutaj pojawi się krótkie wyjaśnienie po polsku</pre>
+
+        <h3>Podgląd wyników (max 50 wierszy)</h3>
+        <div class="table-wrapper">
+          <table class="wait-table" id="aisqlResultTable">
+            <thead id="aisqlResultHead">
+            <tr><th class="muted">Brak danych</th></tr>
+            </thead>
+            <tbody id="aisqlResultBody">
+            <tr><td class="muted">Zapytanie nie zostało jeszcze wykonane.</td></tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </section>

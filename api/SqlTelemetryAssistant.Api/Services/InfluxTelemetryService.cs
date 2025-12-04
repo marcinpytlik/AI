@@ -1,6 +1,5 @@
-
-using System.Net.Http.Headers;
-using System.Text;
+using System.Globalization;
+using InfluxDB.Client;
 using Microsoft.Extensions.Configuration;
 using SqlTelemetryAssistant.Api.Models;
 
@@ -8,87 +7,92 @@ namespace SqlTelemetryAssistant.Api.Services;
 
 public class InfluxTelemetryService
 {
-    private readonly HttpClient _httpClient;
     private readonly string _url;
     private readonly string _org;
     private readonly string _bucket;
     private readonly string _token;
 
-    public InfluxTelemetryService(IConfiguration config, IHttpClientFactory httpClientFactory)
+    public InfluxTelemetryService(IConfiguration config)
     {
-        _httpClient = httpClientFactory.CreateClient();
-        _url = config["Influx:Url"] ?? "http://influxdb:8086";
-        _org = config["Influx:Org"] ?? "Demo";
-        _bucket = config["Influx:Bucket"] ?? "sql_telemetry";
-        _token = config["Influx:Token"] ?? "dev-token";
-
-        if (!string.IsNullOrWhiteSpace(_token))
-        {
-            _httpClient.DefaultRequestHeaders.Authorization =
-                new AuthenticationHeaderValue("Token", _token);
-        }
+        _url = config["Influx:Url"]
+               ?? throw new InvalidOperationException("Missing config: Influx:Url");
+        _org = config["Influx:Org"]
+               ?? throw new InvalidOperationException("Missing config: Influx:Org");
+        _bucket = config["Influx:Bucket"]
+                 ?? throw new InvalidOperationException("Missing config: Influx:Bucket");
+        _token = config["Influx:Token"]
+                 ?? throw new InvalidOperationException("Missing config: Influx:Token");
     }
 
+    /// <summary>
+    /// Zwraca top 10 waitów z ostatnich 5 minut z InfluxDB
+    /// jako lista WaitStatPulse pod konsolę.
+    /// </summary>
     public async Task<IEnumerable<WaitStatPulse>> GetWaitStatsPulseAsync()
     {
+        // Klient Influxa – przyjmuje string, nie char[]
+        using var client = new InfluxDBClient(_url, _token);
+        var queryApi = client.GetQueryApi();
+
+        // Dopasowane do tego, co masz w Data Explorer:
+        //  bucket = sql_telemetry
+        //  _measurement = sqlserver_waitstats
+        //  _field = resource_wait_ms
         var flux = $@"
 from(bucket: ""{_bucket}"")
-  |> range(start: -10m)
-  |> filter(fn: (r) => r[""_measurement""] == ""sqlserver_waitstats"")
+  |> range(start: -5m)
+  |> filter(fn: (r) => r._measurement == ""sqlserver_waitstats"")
+  |> filter(fn: (r) => r._field == ""resource_wait_ms"")
   |> group(columns: [""wait_type""])
-  |> sum(column: ""wait_time_ms"")
-  |> rename(columns: {{ wait_time_ms: ""total_wait_ms"" }})
+  |> sum()
+  |> sort(columns: [""_value""], desc: true)
+  |> limit(n: 10)
 ";
 
-        var content = new StringContent(flux, Encoding.UTF8, "application/vnd.flux");
-        var resp = await _httpClient.PostAsync($"{_url}/api/v2/query?org={Uri.EscapeDataString(_org)}", content);
-        resp.EnsureSuccessStatusCode();
+        var tables = await queryApi.QueryAsync(flux, _org);
 
-        var csv = await resp.Content.ReadAsStringAsync();
+        // Najpierw zbieramy surowe wartości: WaitType + TotalWaitMs
+        var raw = new List<(string WaitType, double TotalWaitMs)>();
 
-        var lines = csv.Split('\n', StringSplitOptions.RemoveEmptyEntries);
-        var dataLines = lines.Where(l => !l.StartsWith("#")).ToList();
+        foreach (var table in tables)
+        {
+            foreach (var record in table.Records)
+            {
+                var waitType = record.GetValueByKey("wait_type")?.ToString();
+                if (string.IsNullOrWhiteSpace(waitType))
+                    continue;
+
+                var valueObj = record.GetValue();
+                if (valueObj is null)
+                    continue;
+
+                var ms = Convert.ToDouble(valueObj, CultureInfo.InvariantCulture);
+
+                raw.Add((waitType, ms));
+            }
+        }
+
+        // policz sumę i procentowy udział
+        var total = raw.Sum(w => w.TotalWaitMs);
 
         var result = new List<WaitStatPulse>();
 
-        if (dataLines.Count <= 1)
-            return result;
-
-        var header = dataLines[0].Split(',');
-        var valueIndex = Array.FindIndex(header, h => h == "_value" || h.EndsWith("total_wait_ms", StringComparison.OrdinalIgnoreCase));
-        var waitTypeIndex = Array.FindIndex(header, h => h == "wait_type");
-
-        foreach (var line in dataLines.Skip(1))
+        foreach (var item in raw)
         {
-            var cols = line.Split(',');
-            if (cols.Length <= Math.Max(valueIndex, waitTypeIndex) || valueIndex < 0 || waitTypeIndex < 0)
-                continue;
+            var percentage = total > 0
+                ? item.TotalWaitMs / total * 100.0
+                : 0.0;
 
-            var waitType = cols[waitTypeIndex];
-            if (!double.TryParse(cols[valueIndex], System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture, out var totalMs))
-                totalMs = 0;
+            // WaitStatPulse(string WaitType, double TotalWaitMs, double SignalWaitMs, double Percentage)
+            var ws = new WaitStatPulse(
+                item.WaitType,
+                item.TotalWaitMs,
+                0.0,           // SignalWaitMs – na razie brak danych, więc 0
+                percentage);
 
-            result.Add(new WaitStatPulse(
-                WaitType: waitType,
-                TotalWaitMs: totalMs,
-                SignalWaitMs: 0,
-                Percentage: 0
-            ));
+            result.Add(ws);
         }
 
-        if (!result.Any())
-            return result;
-
-        var sum = result.Sum(r => r.TotalWaitMs);
-        if (sum > 0)
-        {
-            result = result
-                .Select(r => r with { Percentage = r.TotalWaitMs * 100.0 / sum })
-                .ToList();
-        }
-
-        return result
-            .OrderByDescending(r => r.TotalWaitMs)
-            .ToList();
+        return result;
     }
 }

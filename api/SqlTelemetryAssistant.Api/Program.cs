@@ -15,6 +15,9 @@ builder.Services.AddSingleton<InfluxTelemetryService>();
 builder.Services.AddSingleton<OpenAiRecommendationProvider>();
 builder.Services.AddSingleton<LocalLlmRecommendationProvider>();
 builder.Services.AddSingleton<KnowledgeBaseService>();
+builder.Services.AddSingleton<SqlServerTelemetryService>();
+builder.Services.AddSingleton<AiSqlService>();
+
 
 builder.Services.AddSingleton<IAiRecommendationService>(sp =>
 {
@@ -80,5 +83,41 @@ app.MapGet("/telemetry/pulse-kb", async (
 
     return Results.Ok(response);
 });
+app.MapGet("/api/demo/sql-with-ai", async (
+    SqlServerTelemetryService sqlTelemetry,
+    OpenAiRecommendationProvider ai  // lub IAiRecommendationService, jeśli masz taki interfejs
+) =>
+{
+    // 1) Pobieramy snapshot z SQL Servera
+    var snapshot = await sqlTelemetry.GetBasicSnapshotAsync();
+
+    // 2) Budujemy prompt
+    var prompt = sqlTelemetry.BuildPrompt(snapshot);
+
+    // 3) Pytamy OpenAI o rekomendację
+    var recommendation = await ai.GetRecommendationAsync(prompt);
+
+    // 4) Zwracamy JSON
+    var result = new
+    {
+        Source = "SQL Server + OpenAI",
+        Snapshot = snapshot,
+        Recommendation = recommendation
+    };
+
+    return Results.Ok(result);
+})
+.WithName("SqlWithAiDemo");
+app.MapPost("/api/aisql", async (
+    AiSqlService aiSql,
+    AiSqlRequest request) =>
+{
+    if (string.IsNullOrWhiteSpace(request.Question))
+        return Results.BadRequest(new { error = "Question is required." });
+
+    var response = await aiSql.HandleQuestionAsync(request.Question);
+    return Results.Ok(response);
+})
+.WithName("AiSql");
 
 app.Run();
